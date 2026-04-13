@@ -1,32 +1,24 @@
 <div align="center">
     <img alt="logo" data-is-relative="true" src="./assets/img/logo.png" width="250" height="250"/>
-    <h1>dbt-toolkit 🧰</h1>
-    <img alt="GitHub Workflow Status" src="https://github.com/ramonvermeulen/dbt-toolkit/actions/workflows/build.yml/badge.svg?branch=main">
-    <a href="https://codecov.io/github/ramonvermeulen/dbt-toolkit" ><img src="https://codecov.io/github/ramonvermeulen/dbt-toolkit/graph/badge.svg?token=E0ATR13F60"/></a>
-    <a href="https://plugins.jetbrains.com/plugin/24666-dbttoolkit"><img alt="JetBrains Plugin Version" src="https://img.shields.io/jetbrains/plugin/v/24666-dbttoolkit"></a>
-    <a href="https://plugins.jetbrains.com/plugin/24666-dbttoolkit"><img alt="JetBrains Plugin Downloads" src="https://img.shields.io/jetbrains/plugin/d/24666-dbttoolkit"></a>
-    <a href="https://github.com/ramonvermeulen/dbt-toolkit"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/ramonvermeulen/dbt-toolkit"></a>
+    <h1>dbt-toolkit-continued 🧰</h1>
+    <img alt="GitHub Workflow Status" src="https://github.com/moseswynn/dbt-toolkit/actions/workflows/build.yml/badge.svg?branch=main">
 </div>
 
 <br>
 
-> [!WARNING]  
-> Due to a shift in interest, I am no longer actively maintaining this plugin.
-> However, I am open to accepting pull requests and will review them as time permits.
-> Also I will try to keep the plugin up-to-date with the latest dbt versions and JetBrains IDEs, but without a guarantee.
-
+> [!WARNING]
+> This is a  fork of [ramonvermeulen/dbt-toolkit](https://github.com/ramonvermeulen/dbt-toolkit), which has been archived by its original author. The goal of this fork is to continue supporting new dbt and JetBrains IDE versions and accept community contributions.
 
 ![Lineage Example](./assets/img/sample.gif)
 
 <!-- Plugin description -->
-The dbt-toolkit is an early-stage plugin designed to enhance your experience working with [**dbt-core**](https://github.com/dbt-labs/dbt-core)
+The dbt-toolkit is a plugin designed to enhance your experience working with [**dbt-core**](https://github.com/dbt-labs/dbt-core)
 projects within JetBrains IDEs. It currently supports lineage rendering, dbt documentation, compiled SQL preview, and more!
 Providing a more streamlined and integrated approach to managing your dbt projects in Jetbrains IDEs. The dbt-toolkit is inspired by the
 well-known VSCode plugin [**vscode-dbt-power-user**](https://github.com/AltimateAI/vscode-dbt-power-user), and aims to become an alternative
 for JetBrains IDEs.
 
-> _Note: For larger dbt projects (e.g. hundreds of models) the performance might not be as good, I am looking for ways to improve the performance even
-> for larger dbt projects._
+> _Note: For larger dbt projects (e.g. hundreds of models) the performance might not be as good._
 
 
 ## Features
@@ -39,26 +31,18 @@ quicker way to navigate through your dbt project.
   the fly.
 * **Preview data**: Preview the output data of a dbt model directly in your IDE.
 
-## Upcoming Features
-*These are features I am planning to implement in the future, however this list might change overtime*
-* **Full Jinja support in SQL files**: Highlight Jinja syntax in SQL files and navigate through files by clicking
-through `{{ ref() }}` and `{{ source() }}` tags.
-* **... More**: I am open to suggestions and feedback, so feel free to reach out to me with your ideas!
-
-
 ## Prerequisites
 * For IntelliJ users, it is required to have the [**Python**](https://plugins.jetbrains.com/plugin/631-python) plugin installed so that you can configure a venv via:
 <br>`File` > `Project Structure` > `SDK` > `Select Python` > `Select New Virtual Environment`
 <br>![Set-up venv](./assets/img/settings.jpg)
-* I would recommended to install [**dbt-core**](https://pypi.org/project/dbt-core/) and the required adapters within the configured venv.
+* It is recommended to install [**dbt-core**](https://pypi.org/project/dbt-core/) and the required adapters within the configured venv.
 * Supported/Tested dbt versions are: `>=1.7.0`
 
 If there is a venv configured within the IDE, the plugin will automatically try to use the dbt executable from the venv. 
 If there is no venv configured the plugin will use the globally installed dbt version.
 
 ## Installation
-You can download dbt-toolkit from the JetBrains plugin marketplace. For more information on how to install JetBrains plugins, 
-please refer to the [**official documentation**](https://www.jetbrains.com/help/idea/managing-plugins.html).
+Install from disk by downloading the latest zip from the [releases page](https://github.com/moseswynn/dbt-toolkit/releases) and choosing `Install Plugin from Disk` in the IDE plugin settings.
 
 ## Setting environment variables
 If your dbt project requires environment variables (e.g. `DBT_SOME_ENV_VAR`), please set them via the plugin settings.
@@ -71,21 +55,17 @@ Via the plugin settings, you can also specify a custom path to the `.env` file.
 <!-- Plugin description end -->
 
 ## Releases
-The releases can be found under the repository it's [**releases section**](https://github.com/ramonvermeulen/dbt-toolkit/releases), 
-the latest release in Github doesn't always reflect the latest release in the Jetbrains Marketplace. The reason for this is that the 
-Jetbrains Marketplace needs a couple of days to review a release before publishing. If you really need to be on the latest release 
-you can always download the zip file (e.g. `dbt-toolkit-<version>.zip` and in the IDE Plugin window choose for `Install from disk`.
+Releases can be found under the repository's [releases section](https://github.com/moseswynn/dbt-toolkit/releases).
+To install, download the zip file (e.g. `dbt-toolkit-continued-<version>.zip`) and in the IDE Plugin window choose `Install from disk`.
 
 ## Feedback and Contributions
-I highly appreciate any feedback and contributions as I am developing and improving dbt-toolkit. 
-Feel free to report bugs, issues, or suggest features through the GitHub repository.
+Feel free to report bugs, issues, or suggest features through the GitHub repository's issue tracker.
 
 ## Troubleshooting
-Experiencing issues after upgrading the plugin? Try to delete your `.idea/dbtToolkitSettings.xml` file. If you're still experiencing 
-problems, feel free to open a Github issue and I'll try to investigate and solve the issue in a future release.
+Experiencing issues after upgrading the plugin? Try deleting your `.idea/dbtToolkitSettings.xml` file. If you're still experiencing 
+problems, feel free to open a GitHub issue.
 
 ---
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+Originally based on the [IntelliJ Platform Plugin Template][template]. Forked from [ramonvermeulen/dbt-toolkit](https://github.com/ramonvermeulen/dbt-toolkit).
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
