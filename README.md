@@ -1,3 +1,4 @@
+<!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
     <img alt="logo" data-is-relative="true" src="./assets/img/logo.png" width="250" height="250"/>
     <h1>dbt-toolkit-continued 🧰</h1>
