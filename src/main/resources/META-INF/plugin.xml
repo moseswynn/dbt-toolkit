@@ -1,8 +1,8 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.ramonvermeulen.dbtToolkit</id>
+    <id>com.github.moseswynn.dbtToolkit</id>
     <name>dbtToolkit</name>
-    <vendor>ramonvermeulen</vendor>
+    <vendor>moseswynn</vendor>
 
     <depends>com.intellij.modules.platform</depends>
     <depends optional="true" config-file="python-support.xml">com.intellij.modules.python</depends>
@@ -12,12 +12,12 @@
     <extensions defaultExtensionNs="com.intellij">
         <projectConfigurable
             parentId="tools"
-            instance="com.github.ramonvermeulen.dbtToolkit.ui.settings.DbtToolkitSettingsConfigurable"
+            instance="com.github.moseswynn.dbtToolkit.ui.settings.DbtToolkitSettingsConfigurable"
             id="dbtToolkitSettings"
             displayName="dbtToolkit Settings"
         />
         <toolWindow
-                factoryClass="com.github.ramonvermeulen.dbtToolkit.ui.DbtToolkitMainToolWindow"
+                factoryClass="com.github.moseswynn.dbtToolkit.ui.DbtToolkitMainToolWindow"
                 id="dbtToolkit"
                 anchor="bottom"
                 secondary="false"
@@ -32,7 +32,7 @@
 
     <projectListeners>
         <listener
-                class="com.github.ramonvermeulen.dbtToolkit.listeners.DbtToolkitFileListener"
+                class="com.github.moseswynn.dbtToolkit.listeners.DbtToolkitFileListener"
                 topic="com.intellij.openapi.fileEditor.FileEditorManagerListener"/>
     </projectListeners>
 </idea-plugin>
